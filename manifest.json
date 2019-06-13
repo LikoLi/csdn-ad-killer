@@ -1,0 +1,23 @@
+{
+    "name": "CSDN AD Killer",
+    "manifest_version": 2,
+    "version": "1.0",
+    "author": "liko",
+    "icons": {
+        "16": "icons/icons_16.ico",
+        "48": "icons/icons_16.ico",
+        "64": "icons/icons_16.ico",
+        "128": "icons/icons_16.ico"
+    },
+    "description": "CSDN广告杀手",
+    "browser_action": {
+        "default_icon": "icons/icons_16.ico",
+        "default_popup": "view/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://blog.csdn.net/*"],
+            "js": ["js/jquery.js", "js/ad-killer.js"]
+        }
+    ]
+}
